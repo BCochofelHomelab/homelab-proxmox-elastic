@@ -13,12 +13,12 @@ This repo is one of three that make up the homelab:
 
 - **`homelab-proxmox-elastic`** (this repo) — the Elastic observability
   stack: Elasticsearch, Kibana, Fleet Server, and APM Server.
-- **[`homelab-proxmox-core`](https://github.com/bcochofel/homelab-proxmox-core)**
+- **[`homelab-proxmox-core`](https://github.com/BCochofelHomelab/homelab-proxmox-core)**
   — edge routing and name resolution: the Caddy reverse proxy and the
   CoreDNS + Pihole DNS stack. This repo's VMs resolve against CoreDNS's
   primary + secondary instances specifically (Pihole is not in their
   resolver list).
-- **[`homelab-proxmox-k3s`](https://github.com/bcochofel/homelab-proxmox-k3s)**
+- **[`homelab-proxmox-k3s`](https://github.com/BCochofelHomelab/homelab-proxmox-k3s)**
   — a K3s cluster managed via ArgoCD (GitOps), with Traefik as its
   in-cluster ingress. It runs the OpenTelemetry demo, which feeds its
   traces/metrics/logs to this repo's APM Server rather than a bundled
