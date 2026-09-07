@@ -132,20 +132,17 @@ On release, semantic-release ([`.releaserc.js`](.releaserc.js)):
 
 1. Analyzes commits since the last release (`commit-analyzer`).
 2. Generates release notes (`release-notes-generator`).
-3. Updates [`CHANGELOG.md`](CHANGELOG.md) (`changelog`).
-4. Publishes a GitHub Release (`github`).
-5. Commits the changelog back to the branch (`git`), with
-   `[skip ci]` in the message.
+3. Publishes a GitHub Release with those notes (`github`).
 
-There's no CI workflow wired up yet to run this automatically on merge —
-for now, run it locally to preview what a release would look like:
+No `CHANGELOG.md` file is generated and nothing is committed back to the
+branch. `.github/workflows/release.yml` runs this automatically on push to
+`main`, using the default `GITHUB_TOKEN` (no PAT, no branch-ruleset bypass
+needed, since nothing is pushed to `main`). To preview what a release would
+look like without publishing anything:
 
 ```bash
 npx semantic-release --dry-run
 ```
-
-Wiring `npx semantic-release` into a GitHub Actions workflow on `main` is
-tracked as follow-up work.
 
 ## Pull requests
 
