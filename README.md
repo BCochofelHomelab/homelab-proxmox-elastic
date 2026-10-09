@@ -1,5 +1,12 @@
 # homelab-proxmox-elastic
 
+> [!IMPORTANT]
+> **Archived: superseded by
+> [`homelab-proxmox-workloads`](https://github.com/BCochofelHomelab/homelab-proxmox-workloads).**
+> The Elastic Stack now lives there: Terramate stacks, DEB packages,
+> Logstash for every Elastic Agent and an EDOT Collector gateway for
+> OpenTelemetry. This repository is read-only and kept for reference only.
+
 Elastic Stack observability cluster on Proxmox (MS-01), built with an IaC
 pipeline:
 
